@@ -5,8 +5,8 @@ import { Calendar, CheckSquare, Target, Clock } from "lucide-react";
 const Hero = () => {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-background to-accent/10"></div>
+      {/* Clean minimal overlay */}
+      <div className="absolute inset-0 bg-background/50"></div>
       
       {/* Hero content */}
       <div className="relative z-10 container mx-auto px-4 py-16 lg:py-24">
@@ -17,7 +17,7 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
                 Smart Study
-                <span className="bg-gradient-primary bg-clip-text text-transparent block">
+                <span className="text-primary block">
                   Planner
                 </span>
               </h1>
@@ -30,19 +30,19 @@ const Hero = () => {
             {/* Feature highlights */}
             <div className="grid grid-cols-2 gap-4 text-sm">
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Calendar className="w-4 h-4 text-primary" />
+                <Calendar className="w-4 h-4 text-foreground" />
                 Calendar Integration
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <CheckSquare className="w-4 h-4 text-accent" />
+                <CheckSquare className="w-4 h-4 text-foreground" />
                 Task Management
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Target className="w-4 h-4 text-primary" />
+                <Target className="w-4 h-4 text-foreground" />
                 Goal Tracking
               </div>
               <div className="flex items-center gap-2 text-muted-foreground">
-                <Clock className="w-4 h-4 text-accent" />
+                <Clock className="w-4 h-4 text-foreground" />
                 Deadline Alerts
               </div>
             </div>
@@ -65,13 +65,13 @@ const Hero = () => {
 
           {/* Right content - Hero image */}
           <div className="relative lg:order-last">
-            <div className="relative rounded-2xl overflow-hidden shadow-card animate-float">
+            <div className="relative border border-border overflow-hidden">
               <img 
                 src={heroImage} 
                 alt="Study planning workspace" 
-                className="w-full h-[400px] lg:h-[500px] object-cover"
+                className="w-full h-[400px] lg:h-[500px] object-cover grayscale"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-background/20"></div>
             </div>
           </div>
         </div>

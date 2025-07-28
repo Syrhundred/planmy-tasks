@@ -81,7 +81,7 @@ const Dashboard = () => {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <Card className="bg-gradient-card border-0 shadow-card">
+          <Card className="bg-card border border-border">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">Total Tasks</CardTitle>
             </CardHeader>
@@ -90,27 +90,27 @@ const Dashboard = () => {
             </CardContent>
           </Card>
           
-          <Card className="bg-gradient-card border-0 shadow-card">
+          <Card className="bg-card border border-border">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">Pending</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-primary">{upcomingTasks.length}</div>
+              <div className="text-2xl font-bold">{upcomingTasks.length}</div>
             </CardContent>
           </Card>
           
-          <Card className="bg-gradient-card border-0 shadow-card">
+          <Card className="bg-card border border-border">
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">Completed</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold text-accent">{completedTasks.length}</div>
+              <div className="text-2xl font-bold">{completedTasks.length}</div>
             </CardContent>
           </Card>
         </div>
 
         {/* Task List */}
-        <Card className="bg-gradient-card border-0 shadow-card">
+        <Card className="bg-card border border-border">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <List className="w-5 h-5" />
@@ -156,16 +156,16 @@ const Dashboard = () => {
 
         {/* Completed Tasks */}
         {completedTasks.length > 0 && (
-          <Card className="bg-gradient-card border-0 shadow-card">
+          <Card className="bg-card border border-border">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-accent">
+              <CardTitle className="flex items-center gap-2">
                 <CheckSquare className="w-5 h-5" />
                 Completed Tasks
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               {completedTasks.map((task) => (
-                <div key={task.id} className="flex items-center justify-between p-4 rounded-lg bg-accent/10 opacity-75">
+                <div key={task.id} className="flex items-center justify-between p-4 border border-border bg-muted/50 opacity-75">
                   <div className="flex items-center gap-3">
                     <input 
                       type="checkbox" 

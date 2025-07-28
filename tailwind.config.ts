@@ -68,17 +68,11 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-success': 'var(--gradient-success)',
-				'gradient-card': 'var(--gradient-card)',
-			},
-			boxShadow: {
-				'elegant': 'var(--shadow-elegant)',
-				'card': 'var(--shadow-card)',
-			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',
+			},
+			fontFamily: {
+				'mono': ['ui-monospace', 'SFMono-Regular', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
 			},
 			keyframes: {
 				'accordion-down': {
